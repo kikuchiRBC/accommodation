@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>特定技能介護（かいご）｜無料問題集【ふりがな付き】</title>
+<meta name="description"
+content="特定技能介護分野の試験対策サイトです。やさしい日本語で清掃用具、作業手順、安全衛生、ホテル清掃を学習できます。外国人向け無料クイズ。">
+<meta name="keywords"
+content="
+介護,
+kaigo,
+特定技能,
+ビルクリーニング,
+外国人,
+技能評価試験,
+やさしい日本語,
+ふりがな,
+SSW,
+Specified Skilled Worker,
+Building Cleaning,
+Japanese Language Learning,
+Cleaning Test,
+Hotel Cleaning
+">
+<style>
+html{
+scroll-behavior:smooth;
+}
+#questionText{
+    font-size:30px;
+    font-weight:bold;
+    line-height:2;
+}
+
+#toolImage{
+    display:block;
+    margin:20px auto;
+
+    width:100%;
+    max-width:250px;
+    height:auto;
+
+}
+
+#quiz{
+    width:600px;
+    max-width:90%;
+    margin:30px auto;
+    text-align:center;
+}
+
+#questionText{
+    font-size:30px;
+    font-weight:bold;
+    color:#003366;
+    margin:20px;
+}
+
+
+
+.animated-wave-section{
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+     height:250px;
+    overflow:hidden;
+    z-index:1;
+    pointer-events:none;
+}
+
+
+rt{
+    font-size:0.6em;
+    color:rgb(249, 249, 249);
+    font-weight:bold;
+}
+
+.question-list-page rt{
+    color:black !important;
+}
+
+
+.animated-wave{  
+    position:absolute;
+    bottom:-50px;
+    left:0;
+
+    width:200%;
+    height:180%;
+
+    display:block;
+
+    will-change: transform;
+    transform: translate3d(0,0,0);
+
+    animation:wave-animation 10s linear infinite;
+}
+
+
+
+
+
+/* 波線の色 */
+.animated-wave path{
+    fill:#c8e6c9;
+}
+
+
+
+
+@keyframes wave-animation{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+.animated-wave-section .content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 100px;
+  color: #333;
+}
+      button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2bff00, #ddff00);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: rgba(255, 252, 252, 0.3);
+  transform: skewX(-25deg);
+  transition: 0.6s;
+}
+
+button:hover::before {
+  left: 140%;
+}
+
+
+button:hover{
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+  #orcaImage {
+  animation: swim 8s ease-in-out infinite;
+}
+
+@keyframes swim {
+  0% {
+    transform: translate(0px, 0px) rotate(-3deg);
+  }
+
+  25% {
+    transform: translate(15px, -8px) rotate(0deg);
+  }
+
+  50% {
+    transform: translate(0px, -15px) rotate(3deg);
+  }
+
+  75% {
+    transform: translate(-15px, -8px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(-3deg);
+  }
+}
+/* タイトル */
+h1{ border:none;
+    border-radius:12px;
+    background:linear-gradient(45deg,#81c784,#66bb6a);
+    color:white;
+    font-size:2.5rem;
+    text-shadow:2px 2px 5px rgba(0,0,0,0.3);
+    margin-top:20px;
+}
+
+/* 問題文 */
+h2 {
+    animation: none;
+  display: inline-block;
+  max-width: 90%;
+  padding: 15px 25px;
+  margin: 15px 0;
+
+  color: #6c6c6c;
+  font-size: 26px;
+  font-weight: bold;
+
+  background: rgba(129,199,132,0.2);
+  border: 2px solid #81c784;
+  border-radius: 20px;
+
+
+  box-shadow:
+    0 0 15px rgba(0,195,255,0.5),
+    inset 0 0 15px rgba(129,199,132,0.3);
+
+  text-shadow:
+    0 0 5px rgba(255,255,255,0.8),
+    0 0 10px #00c6ff;
+}
+.fall-item{
+    position:fixed;
+    top:-50px;
+    pointer-events:none;
+    z-index:5;
+    animation:fallFlower linear forwards;
+}
+
+@keyframes fallFlower{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:
+            translateY(calc(100vh + 100px))
+            translateX(100px)
+            rotate(360deg);
+
+        opacity:0;
+    }
+}
+/* 問題文がふわふわ */
+h2 {
+  animation: floatQuestion 3s ease-in-out infinite;
+}
+
+@keyframes floatQuestion {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+img {
+  margin: 10px;
+  transition: 0.3s;
+}
+
+
+
+
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+       z-index: 9999;
+  }
+
+
+body {   
+ text-align:center;
+    font-family:sans-serif;
+
+        background:
+    linear-gradient(
+        to bottom,
+        #f8ffef 0%,
+        #eaf7ff 50%,
+        #fff8e6 100%
+    );
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    margin:0;
+
+    min-height:100vh;
+
+    overflow-x:hidden;   /* 横だけ隠す */
+    overflow-y:auto;     /* 縦スクロールは許可 */
+}
+
+.fall-emoji{
+    position:fixed;
+    top:-50px;
+    font-size:40px;
+    z-index:99999;
+    pointer-events:none;
+    animation:fallDown linear forwards;
+}
+
+@keyframes fallDown{
+
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(calc(100vh + 100px))
+                  rotate(720deg);
+        opacity:0;
+    }
+}
+.bubble-background{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  z-index:5;
+}
+
+
+/* 泡の見た目 */
+
+.bubble{
+  position:absolute;
+  bottom:-50px;
+
+  border:2px solid rgba(255,255,255,.7);
+  background:rgba(255,255,255,.15);
+
+  border-radius:50%;
+z-index:5;
+  animation:bubble 12s linear infinite;
+}
+
+
+/* 泡の一番明るい部分を疑似要素で表現 */
+.bubble::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.25) translate(-70%, -70%);
+  background: radial-gradient(rgba(255,255,255, 0.5), transparent);
+  border-radius: 50%;
+}
+
+/* 泡が上に浮かび上がっていくアニメーション */
+@keyframes bubble {
+  0% {
+   transform: translateY(0);
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.intro-box{
+    max-width:800px;
+    margin:10px auto;
+    padding:10px;
+
+    background:rgba(255,255,255,0.9);
+    border-radius:20px;
+
+    border:3px solid #69dce9;
+
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+
+    font-size:10px;
+    line-height:2;
+    font-weight:bold;
+
+    color:#3283d4;
+}
+
+
+.random-btn:hover{
+    background-color: darkorange;
+}
+
+/* スコア */
+#scoreBoard{
+  
+    position:fixed;
+    margin:10px auto;
+    width:fit-content;
+
+    top:15px;
+    right:20px;
+    background:rgba(255,255,255,0.9);
+    border-radius:15px;
+    padding:15px 25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* クイズエリア */
+#quiz{
+    width:600px;
+    max-width:90%;
+    margin:30px auto;
+    background:rgba(198, 227, 143, 0.95);
+    border:4px solid #81c784;
+    border-radius:25px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+}
+
+
+
+.random-btn{
+    background: linear-gradient(45deg,#c5bfff,#a79fff) !important;
+    color:white !important;
+}
+
+/* 問題数 */
+#count{
+    color:rgb(0, 43, 116);
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+.correct-effect{
+    position:fixed;
+    font-size:40px;
+    animation:pop 1s ease-out forwards;
+    pointer-events:none;
+    z-index:99999;
+}
+
+@keyframes pop{
+    0%{
+        transform:translateY(0) scale(0);
+        opacity:1;
+    }
+    50%{
+        transform:translateY(-50px) scale(1.5);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-100px) scale(2);
+        opacity:0;
+    }
+}
+/* ボタン */
+
+  .container {
+ padding-bottom:260px;
+    width:95%;
+    max-width:1000px;
+    min-height:auto;
+    margin:20px auto;
+    padding:15px;
+    box-sizing:border-box;
+  position: relative;
+      z-index:100;
+    background: #ffffff99;
+    border-radius: 15px;
+  }
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+button:disabled{
+    opacity:0.5;
+    cursor:not-allowed;
+}
+
+/* 正誤表示 */
+#result{
+    font-size:28px;
+    font-weight:bold;
+    margin:25px;
+     color:red;
+}
+
+/* 次へボタン */
+#next,
+#nextSet{
+    width:260px;
+    background:linear-gradient(45deg,#00c853,#64dd17);
+}
+button{
+        z-index:1000;
+      width:90%;
+      
+   max-width:320px;
+    min-height:60px;
+    margin:10px;
+    padding:15px;
+    font-size:20px;
+    font-weight:bold;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(45deg,#81c784,#a5d6a7);
+    color:whitesmoke;
+    cursor:pointer;
+    transition:all .3s ease;
+
+
+
+text-shadow:
+    -1px -1px 0 rgb(61, 41, 153),
+     1px -1px 0 rgb(61, 41, 153),
+    -1px  1px 0 rgb(61, 41, 153),
+     1px  1px 0 rgb(61, 41, 153);
+
+}
+
+.floating-close-btn{
+    position:fixed;
+    top:100px;
+    right:20px;
+    z-index:99999;
+
+    width:auto;
+    min-height:auto;
+    padding:12px 20px;
+
+    background:linear-gradient(45deg,#ff5252,#ff1744);
+    color:white;
+    border:none;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+}
+
+.floating-close-btn:hover{
+    transform:scale(1.05);
+}
+.nav{
+    position:fixed;
+    bottom:12px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:8px;
+    z-index:9999;
+}
+
+.nav a{
+    text-decoration:none;
+    padding:8px 14px;
+    border-radius:999px;
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+/* 単語一覧 */
+.nav a:first-child{
+    background:linear-gradient(45deg,#4caf50,#81c784);
+}
+
+/* トップ */
+.nav a:last-child{
+    background:linear-gradient(45deg,#2196f3,#64b5f6);
+}
+
+@media (max-width:768px){
+
+    body{
+      
+        display:block;
+        min-height:auto;
+        overflow-y:auto;
+
+    }
+
+    .container{
+        width:95%;
+        margin:10px auto;
+        padding:10px;
+        min-height:auto;
+        
+    }
+
+    h1{
+        font-size:1.5rem;
+    }
+
+    h2{
+        font-size:20px;
+        padding:10px;
+    }
+
+    #questionText{
+        font-size:22px;
+        line-height:1.8;
+    }
+
+    button{
+        width:95%;
+        max-width:none;
+        min-height:60px;
+        font-size:18px;
+        margin:6px auto;
+        display:block;
+    }
+
+    #toolImage{
+        width:50%;
+        max-width:220px;
+        min-height:60px;
+        height:auto;
+    }
+
+    #scoreBoard{
+           position:fixed;
+        margin:10px auto;
+    }
+
+    rt{
+        font-size:0.5em;
+    }
+
+
+    .floating-close-btn{
+        top:80px;
+        right:10px;
+        font-size:16px;
+        padding:10px 16px;
+    }
+
+}
+</style>
+
+
+<style id="yellow-theme">
+/* ===== 黄色を主調にしたテーマ ===== */
+
+body{
+    background:
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,.85) 0 45px, transparent 46px),
+        radial-gradient(circle at 85% 25%, rgba(255,255,255,.65) 0 60px, transparent 61px),
+        linear-gradient(180deg,#fffde7 0%,#fff8c4 45%,#fff1a8 100%);
+    color:#5a4300;
+}
+
+/* タイトル */
+h1{
+    background:linear-gradient(135deg,#f9d423,#f6b800);
+    color:#fff;
+    text-shadow:2px 2px 5px rgba(110,75,0,.35);
+    box-shadow:0 6px 18px rgba(214,160,0,.25);
+}
+
+/* 問題文 */
+h2{
+    color:#5a4300;
+    background:rgba(255,255,255,.82);
+    border:3px solid #f4c542;
+    border-radius:18px;
+    box-shadow:0 5px 16px rgba(180,130,0,.15);
+}
+
+/* 説明ボックス */
+.intro-box{
+    background:rgba(255,255,255,.92);
+    border:3px solid #f4c542;
+    color:#725400;
+    box-shadow:0 6px 20px rgba(180,130,0,.18);
+}
+
+/* ボタン */
+button{
+    background:linear-gradient(135deg,#ffd54f,#f4b400);
+    color:#e4e1d9;
+    border:2px solid #e0a800;
+    box-shadow:0 4px 10px rgba(180,130,0,.18);
+}
+
+button:hover{
+    background:linear-gradient(135deg,#ffe082,#f6c343);
+    box-shadow:0 8px 20px rgba(180,130,0,.28);
+}
+
+/* ランダムボタン */
+.random-btn:hover{
+    background-color:#e6a800;
+}
+
+/* スコア */
+#scoreBoard{
+    background:rgba(255,255,255,.94);
+    border:3px solid #f4c542;
+    color:#5a4300;
+    box-shadow:0 5px 18px rgba(180,130,0,.2);
+}
+
+/* 選択肢・カード系 */
+.choice,
+.answer,
+.question-card,
+.card{
+    border-color:#f4c542 !important;
+    background:rgba(255,255,255,.92);
+}
+
+.choice:hover,
+.answer:hover{
+    background:#fff3b0 !important;
+}
+
+/* アニメーションする波 */
+.animated-wave path{
+    fill:#ffe082;
+}
+
+/* 泡 */
+.bubble{
+    border-color:rgba(255,214,80,.65);
+    background:rgba(255,255,255,.22);
+}
+
+/* ふりがな */
+rt{
+    color:#fffefb;
+}
+
+/* リンク */
+a{
+    color:#9a7000;
+}
+
+a:hover{
+    color:#d18f00;
+}
+
+/* 上へボタン・固定ナビなど */
+.home-btn,
+.nav-btn,
+.top-btn{
+    background:linear-gradient(135deg,#ffd54f,#f4b400) !important;
+    color:#5a4300 !important;
+    border-color:#e0a800 !important;
+}
+
+/* 強調表示 */
+.correct{
+    background:#fff1a8 !important;
+    border-color:#e0a800 !important;
+}
+
+/* 黄色テーマの光沢 */
+button::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        120deg,
+        transparent 20%,
+        rgba(255,255,255,.35) 45%,
+        transparent 70%
+    );
+    transform:translateX(-100%);
+    transition:.6s;
+    pointer-events:none;
+}
+
+button:hover::after{
+    transform:translateX(100%);
+}
+</style>
+
+</head>
+<body id="top">
+
+
+  
+<section class="animated-wave-section">
+  <svg class="animated-wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+
+    <path fill="#00bcd4"
+    d="M0,160L48,160C96,160,192,160,288,170.7C384,181,480,203,576,197.3C672,192,768,160,864,165.3C960,171,1056,213,1152,213.3C1248,213,1344,171,1392,149.3L1440,128L1440,320L0,320Z">
+    </path>
+
+    <path fill="#00bcd4"
+    d="M0,160L48,160C96,160,192,160,288,170.7C384,181,480,203,576,197.3C672,192,768,160,864,165.3C960,171,1056,213,1152,213.3C1248,213,1344,171,1392,149.3L1440,128L1440,320L0,320Z"
+    transform="translate(1438,0)">
+    </path>
+
+  </svg>
+</section>
+<main>
+<div class="bubble-background"></div>
+    <h1>特定技能介護試験対策【無料問題集】</h1>
+<div class="intro-box">
+<p id="introText">
+🌏 外国人向けの特定技能介護試験対策サイトです。
+<br>
+📚 ふりがな付きのやさしい日本語で学習できます。
+<br>
+介護を無料で勉強できます。
+<br>
+🌏 This website helps foreign residents prepare for the Specified Skilled Worker (SSW) Building Cleaning Skills Test.
+<br>
+📚 Learn with easy Japanese and furigana support.
+<br>
+🧹 Study cleaning tools, workplace safety, hotel cleaning, and bed making for free.
+</p>
+</div>
+
+    <div class="container">
+
+
+<div id="scoreBoard">
+    <div id="count"></div>
+    score：<span id="score">0</span>　
+    miss：<span id="miss">0</span>
+</div>
+<div id="start">
+<div id="questionList" style="display:none;">
+    <h2>問題一覧</h2>
+
+    <div id="questionListArea"
+         style="
+         text-align:left;
+         max-height:600px;
+         overflow-y:auto;
+         background:rgb(218, 233, 255);
+         padding:20px;
+         border-radius:10px;">
+    </div>
+
+    <br>
+
+    <button onclick="closeQuestionList()">
+        <ruby>閉<rt>と</rt></ruby>じる
+    </button>
+</div>
+<p>
+
+★実技問題は、Chromeなどの翻訳機能を使って、受験する言語にサイトを翻訳してからご利用ください。<br>
+実際の実技評価試験に近い形式のクイズで練習できます。<br>
+★ Practical Skills Assessment Test Preparation<br>
+For the Practical Skills Assessment Test, please use your browser's translation feature, such as Google Chrome Translate, to translate this website into your exam language before use.<br>
+You can practice with quizzes designed to closely match the actual test format.
+
+</p>
+    <h2>セットを<ruby>選<rt>えら</rt></ruby>んでください</h2>
+<br>
+<button onclick="startQuizData1()">
+📖  <ruby>学科問題<rt>がっかもんだい</rt></ruby>
+</button>
+
+<button onclick="startQuizData2()">
+🩺 <ruby>実技問題<rt>じつぎもんだい</rt></ruby>
+</button>
+<br>
+<h2>TEST</h2>
+<br><button onclick="startTest1()">
+📖 <ruby>学科<rt>がっか</rt></ruby>TEST30
+</button>
+
+<button onclick="startTest2()">
+🩺 <ruby>実技<rt>じつぎ</rt></ruby>TEST6
+</button>
+<br>
+<h2><ruby>問題一覧<rt>もんだいいちらん</rt></ruby></h2>
+<br>
+<button onclick="showQuestionList1()">
+📚 <ruby>学科問題一覧<rt>がっかもんだいいちらん</rt></ruby>
+</button>
+
+<button onclick="showQuestionList2()">
+📚 <ruby>実技問題一覧<rt>じつぎもんだいいちらん</rt></ruby>
+</button>
+
+</div>
+
+<div id="quiz" style="display:none;">
+<div id="questionText"></div>
+<img id="toolImage" width="400">
+    <div id="choices"></div>
+    <div id="result"></div>
+    <button id="next" onclick="nextQuestion()">次の問題</button>
+<button id="nextSet" onclick="goNextSet()" style="display:none;">
+次のセットへ進む
+</button>
+
+
+    </div>
+<button onclick="goHome()">RESET</button>
+</div>
+</div></div></div>
+</main>
+<nav class="nav">
+    <a href="shukuhaku_word_70.html">🏠 単語一覧へ</a>
+
+    <a href="javascript:void(0);" onclick="goTop();">
+        ⬆ トップ
+    </a>
+</nav>
+</section>
+<script src="js/QuizData1.js"></script>
+<script src="js/QuizData2.js"></script>
+<script>
+    let allQuizData = [
+    ...QuizData1,
+    ...QuizData2
+];
+function showQuestionList1(){
+    allQuizData = [...QuizData1];
+    showQuestionList();
+}
+
+function showQuestionList2(){
+    allQuizData = [...QuizData2];
+    showQuestionList();
+}
+function startTest1(){
+allQuizData = [...QuizData1];
+startQuiz(15);
+}
+
+function startTest2(){
+    allQuizData = [...QuizData2];
+startQuiz(45);
+}
+function goTop(){
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    });
+
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+}
+function makeChoices(correct){
+
+    if(imageQuizData.length < 4){
+        return [correct.answer];
+    }
+
+    let choices = [correct.answer];
+
+    while(choices.length < 4){
+
+        let random =
+            imageQuizData[
+                Math.floor(
+                    Math.random() *
+                    imageQuizData.length
+                )
+            ].answer;
+
+        if(!choices.includes(random)){
+            choices.push(random);
+        }
+    }
+
+    return choices.sort(() => Math.random() - 0.5);
+}
+
+
+let score = 0;
+let miss = 0;
+
+
+
+let imageQuizData = [];
+
+
+let quizSet1 = allQuizData.slice(0, 50);
+let quizSet2 = allQuizData.slice(50);
+
+let quizData = [];
+
+
+
+let currentSet = 1;
+quizData = quizSet1
+
+let current = 0;
+let wrongQuestions = {
+    1: [],
+    2: [],
+    3: [],
+    4: [],
+    5: []
+};
+let reviewMode = false;
+const symbols = ["🌸", "🍀"];
+
+function createFlower() {
+
+    const item = document.createElement("div");
+    item.className = "fall-item";
+
+    item.innerHTML =
+        symbols[Math.floor(Math.random() * symbols.length)];
+
+    item.style.left = Math.random() * 100 + "vw";
+
+    const size = 20 + Math.random() * 40;
+
+    item.style.fontSize = size + "px";
+
+    item.style.animationDuration =
+        (8 + Math.random() * 6) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => {
+        item.remove();
+    }, 15000);
+}
+
+setInterval(createFlower, 500);
+function startQuizData1(){
+
+    allQuizData = [...QuizData1];
+
+    startQuiz(1);
+}
+
+function startQuizData2(){
+
+    allQuizData = [...QuizData2];
+
+    startQuiz(1);
+}
+function startQuiz(set){
+    imageQuizData = allQuizData.filter(q =>
+q.image &&
+!["1","2","3","4","A","B","C","D"]
+.includes(q.answer)
+);
+    document.getElementById("introText").style.display = "none";
+    score = 0;
+    miss = 0;
+
+
+document.getElementById("score").textContent = score;
+document.getElementById("miss").textContent = miss;
+
+    currentSet = set;  // ←追加
+
+    document.getElementById("start").style.display = "none";
+    document.getElementById("quiz").style.display = "block";
+
+
+if(set === 1){
+
+    quizData = [...allQuizData];
+
+    for(let i = quizData.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [quizData[i], quizData[j]] = [quizData[j], quizData[i]];
+    }
+
+}else if(set >= 10){
+
+    quizData = [...allQuizData];
+
+    for(let i = quizData.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random() * (i + 1));
+        [quizData[i], quizData[j]] = [quizData[j], quizData[i]];
+    }
+
+    quizData = quizData.slice(0,set);
+}
+
+
+
+    current = 0;
+    loadQuiz();
+}
+
+function shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
+}
+function goHome(){
+document.getElementById("introText").style.display = "block";
+
+
+    document.getElementById("quiz").style.display = "none";
+    document.getElementById("start").style.display = "block";
+
+    current = 0;
+    currentSet = 1;
+    reviewMode = false;
+
+wrongQuestions = {
+    1: [],
+    2: [],
+    3: [],
+    4: [],
+    5: []
+};
+
+
+    document.getElementById("count").textContent = "";
+}
+
+function loadQuiz(){
+
+    document.getElementById("result").textContent="";
+    document.getElementById("next").style.display="none";
+
+const q = quizData[current];
+
+if(q.image){
+
+    document.getElementById("toolImage").style.display = "block";
+    document.getElementById("toolImage").src = q.image;
+
+    document.getElementById("questionText").style.display = "block";
+    document.getElementById("questionText").innerHTML =
+        q.question || "";
+
+}else{
+
+    document.getElementById("toolImage").style.display = "none";
+
+    document.getElementById("questionText").style.display = "block";
+    document.getElementById("questionText").innerHTML =
+        q.question || "";
+}
+
+
+    document.getElementById("count").textContent =
+        (current + 1) + " / " + quizData.length;
+
+    const area =
+        document.getElementById("choices");
+
+    area.innerHTML="";
+
+   
+
+const choices = q.choices
+    ? q.choices
+    : makeChoices(q);
+
+
+
+    choices.forEach(choice=>{
+
+        const btn =
+            document.createElement("button");
+
+        btn.innerHTML = choice;
+
+        btn.onclick = function(){
+
+            if(choice === q.answer){
+
+                score++;
+
+                document.getElementById("result")
+                    .textContent = "🎉 正解！";
+showCorrectEffect();
+            }else{
+
+   miss++;
+
+if(!wrongQuestions[currentSet]){
+    wrongQuestions[currentSet] = [];
+}
+
+wrongQuestions[currentSet].push(q);
+
+document.getElementById("result")
+.innerHTML =
+"× 不正解！ 正解は「" + q.answer + "」";
+}
+
+            document.getElementById("score")
+                .textContent = score;
+
+            document.getElementById("miss")
+                .textContent = miss;
+
+            document
+            .querySelectorAll("#choices button")
+            .forEach(b => b.disabled = true);
+
+            document.getElementById("next")
+                .style.display="inline-block";
+        };
+
+        area.appendChild(btn);
+    });
+}
+function goNextSet(){
+
+    currentSet++;
+
+    if(currentSet === 2){
+        quizData = allQuizData.slice(50,100);
+    }else if(currentSet === 3){
+        quizData = allQuizData.slice(100,150);
+    }else if(currentSet === 4){
+        quizData = allQuizData.slice(150);
+    }else{
+        alert("全セット終了です！");
+        goHome();
+        return;
+    }
+
+    current = 0;
+    reviewMode = false;
+
+    document.getElementById("nextSet").style.display = "none";
+
+    loadQuiz();
+}
+function showCorrectEffect(){
+
+    const marks = ["🔶","✨","🤩","⭐","🔷","💚","💜"];
+
+    for(let i = 0; i < 50; i++){
+
+        const emoji = document.createElement("div");
+
+        emoji.className = "fall-emoji";
+
+        emoji.textContent =
+            marks[Math.floor(Math.random() * marks.length)];
+
+        emoji.style.left =
+            Math.random() * window.innerWidth + "px";
+
+        emoji.style.animationDuration =
+            (Math.random() * 2 + 2) + "s";
+
+        document.body.appendChild(emoji);
+
+        setTimeout(() => {
+            emoji.remove();
+        }, 4000);
+    }
+}
+function nextQuestion(){
+
+    current++;
+
+    if(current >= quizData.length){
+
+        // 復習モード終了
+        if(reviewMode){
+
+            reviewMode = false;
+
+            document.getElementById("choices").innerHTML = "";
+            document.getElementById("result").textContent =
+            "復習終了！";
+
+            document.getElementById("next").style.display = "none";
+            document.getElementById("nextSet").style.display = "inline-block";
+
+            return;
+        }
+
+// ランダム30問は復習なし
+if(currentSet >= 10){
+
+    document.getElementById("choices").innerHTML = "";
+    document.getElementById("result").innerHTML =
+        "🏆 テスト30問終了！<br>" +
+        quizData.length + "点中 " + score + " 点でした。"
+
+
+    document.getElementById("next").style.display = "none";
+    document.getElementById("nextSet").style.display = "none";
+    return;
+}
+
+// 間違いがあれば復習
+if(wrongQuestions[currentSet].length > 0){
+
+            alert("セット" + currentSet + "の復習を行います");
+
+            quizData = wrongQuestions[currentSet];
+            wrongQuestions[currentSet] = [];
+
+            current = 0;
+            reviewMode = true;
+
+            loadQuiz();
+            return;
+        }
+
+// 間違いなしでセット終了
+
+document.getElementById("choices").innerHTML = "";
+
+if(currentSet == 5){
+    document.getElementById("result").innerHTML =
+        "🏆 テスト30問終了！<br>30点中 " + score + " 点でした。";
+
+    document.getElementById("next").style.display = "none";
+    document.getElementById("nextSet").style.display = "none";
+    return;
+}
+
+document.getElementById("result").textContent =
+    "セット" + currentSet + "終了！";
+
+document.getElementById("next").style.display = "none";
+document.getElementById("nextSet").style.display = "inline-block";
+
+return;
+    }
+
+    loadQuiz();
+}
+document.addEventListener('DOMContentLoaded', () => {
+  // コンテナを指定
+const section = document.querySelector(".bubble-background");
+  // 泡を生成する関数
+  const createBubble = () => {
+    const bubbleEl = document.createElement('span');
+    bubbleEl.className = 'bubble';
+    const minSize = 10;
+    const maxSize = 50;
+    const size = Math.random() * (maxSize + 1 - minSize) + minSize;
+    bubbleEl.style.width = `${size}px`;
+    bubbleEl.style.height = `${size}px`;
+    bubbleEl.style.left = Math.random() * innerWidth + 'px';
+    section.appendChild(bubbleEl);
+
+    // 一定時間が経てば泡を消す
+    setTimeout(() => {
+      bubbleEl.remove();
+    }, 8000);
+  };
+
+setInterval(createBubble, 1200);
+
+});
+
+function showQuestionList(){
+
+    document.getElementById("start").style.display = "none";
+
+let html = `
+<div class="question-list-page" style="
+    background:white;
+    max-width:900px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:15px;
+    text-align:left;
+">
+<h2>📚 問題一覧</h2>
+`;
+
+allQuizData.forEach((q,index)=>{
+
+    html += `
+    <div style="
+        margin-bottom:20px;
+        padding:10px;
+        border-bottom:1px solid #cccccc;
+    ">
+        <b>${index + 1}.</b><br><br>
+    `;
+
+    // 画像問題
+    if(q.image){
+        html += `
+            <img src="${q.image}"
+                 style="max-width:150px;width:100%;height:auto;">
+            <br><br>
+        `;
+    }
+
+    // 文章問題
+    if(q.question){
+        html += `${q.question}<br><br>`;
+    }
+
+    html += `
+        <span style="color:red;font-weight:bold;">
+            正解：${q.answer}
+        </span>
+        <br><br>
+    `;
+
+    if(q.choices){
+        html += q.choices.map(c => `・${c}`).join("<br>");
+    }
+
+    html += `</div>`;
+});
+
+html += `
+<button
+    class="floating-close-btn"
+    onclick="closeQuestionList()">
+    ← もどる
+</button>
+</div>
+`;
+
+    document.querySelector(".container").innerHTML = html;
+}
+
+function closeQuestionList(){
+    location.reload();
+}
+</script>
+
+</body>
+</html>
