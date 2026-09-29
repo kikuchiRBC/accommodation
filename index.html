@@ -223,7 +223,7 @@ h2 {
 
   text-shadow:
     0 0 5px rgba(255,255,255,0.8),
-    0 0 10px #00c6ff;
+    0 0 10px #fecc00;
 }
 .fall-item{
     position:fixed;
@@ -573,10 +573,12 @@ text-shadow:
     text-decoration:none;
     padding:8px 14px;
     border-radius:999px;
-    color:white;
+    color:rgb(255, 254, 253);
+     border: 4px solid #81c784;
     font-weight:bold;
     font-size:14px;
     box-shadow:0 4px 10px rgba(0,0,0,.2);
+    background:linear-gradient(45deg,#f89078,#ff7189);
 }
 
 /* 単語一覧 */
@@ -588,7 +590,33 @@ text-shadow:
 .nav a:last-child{
     background:linear-gradient(45deg,#2196f3,#64b5f6);
 }
+/* もどるボタン */
+.nav .back-btn{
+    width:auto;
+    min-width:100px;
+    min-height:auto;
 
+    margin:0;
+    padding:8px 14px;
+
+    border:2px solid #e0a800;
+    border-radius:999px;
+
+    background:linear-gradient(135deg,#ffd54f,#f4b400);
+    color:#5a4300;
+
+    font-size:14px;
+    font-weight:bold;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+
+    text-shadow:none;
+}
+
+.nav .back-btn:hover{
+    background:linear-gradient(135deg,#ffe082,#f6c343);
+    transform:translateY(-2px);
+}
 @media (max-width:768px){
 
     body{
@@ -704,7 +732,7 @@ button{
 
 button:hover{
     background:linear-gradient(135deg,#ffe082,#f6c343);
-    box-shadow:0 8px 20px rgba(180,130,0,.28);
+    box-shadow:0 8px 20px rgba(255, 247, 226, 0.28);
 }
 
 /* ランダムボタン */
@@ -782,7 +810,7 @@ button::after{
     background:linear-gradient(
         120deg,
         transparent 20%,
-        rgba(255,255,255,.35) 45%,
+        rgba(255, 215, 215, 0.35) 45%,
         transparent 70%
     );
     transform:translateX(-100%);
@@ -857,9 +885,7 @@ button:hover::after{
 
     <br>
 
-    <button onclick="closeQuestionList()">
-        <ruby>閉<rt>と</rt></ruby>じる
-    </button>
+
 </div>
 
     <h2>セットを<ruby>選<rt>えら</rt></ruby>んでください</h2>
@@ -910,11 +936,21 @@ button:hover::after{
 </div></div></div>
 </main>
 <nav class="nav">
-    <a href="shukuhaku_word_70.html">🏠 単語一覧へ</a>
+
+    <a href="shukuhaku_word_70.html">
+        🏠 単語一覧へ
+    </a>
 
     <a href="javascript:void(0);" onclick="goTop();">
-        ⬆ トップ
+        ⬆ PG UP
     </a>
+
+    <button
+        class="back-btn"
+        onclick="closeQuestionList()">
+        ← もどる
+    </button>
+
 </nav>
 </section>
 <script src="js/QuizData1.js"></script>
@@ -1357,77 +1393,217 @@ setInterval(createBubble, 1200);
 
 });
 
+
+// ========================================
+// 問題一覧
+// ========================================
+
 function showQuestionList(){
 
     document.getElementById("start").style.display = "none";
 
-let html = `
-<div class="question-list-page" style="
-    background:white;
-    max-width:900px;
-    margin:20px auto;
-    padding:20px;
-    border-radius:15px;
-    text-align:left;
-">
-<h2>📚 問題一覧</h2>
-`;
-
-allQuizData.forEach((q,index)=>{
-
-    html += `
-    <div style="
-        margin-bottom:20px;
-        padding:10px;
-        border-bottom:1px solid #cccccc;
+    let html = `
+    <div class="question-list-page" style="
+        background:white;
+        max-width:900px;
+        margin:20px auto;
+        padding:20px;
+        border-radius:15px;
+        text-align:left;
     ">
-        <b>${index + 1}.</b><br><br>
+
+    <h2>📚 問題一覧</h2>
     `;
 
-    // 画像問題
-    if(q.image){
+    allQuizData.forEach((q,index)=>{
+
+        const answerId = "answer-" + index;
+
         html += `
-            <img src="${q.image}"
-                 style="max-width:150px;width:100%;height:auto;">
+        <div style="
+            margin-bottom:20px;
+            padding:15px;
+            border-bottom:1px solid #cccccc;
+            border-radius:12px;
+            background:#fffdf5;
+        ">
+
+            <b>${index + 1}.</b>
             <br><br>
         `;
-    }
 
-    // 文章問題
-    if(q.question){
-        html += `${q.question}<br><br>`;
-    }
+
+        // ==============================
+        // 画像
+        // ==============================
+
+        if(q.image){
+
+            html += `
+                <img src="${q.image}"
+                     style="
+                        max-width:150px;
+                        width:100%;
+                        height:auto;
+                        display:block;
+                        margin:10px auto;
+                     ">
+                <br>
+            `;
+        }
+
+
+        // ==============================
+        // 問題文
+        // ==============================
+
+        if(q.question){
+
+            html += `
+                <div style="
+                    font-size:20px;
+                    font-weight:bold;
+                    line-height:1.8;
+                ">
+                    ${q.question}
+                </div>
+
+                <br>
+            `;
+        }
+
+
+        // ==============================
+        // 選択肢
+        // ==============================
+
+        if(q.choices){
+
+            html += `
+                <div style="
+                    background:#fff8d6;
+                    padding:12px;
+                    border-radius:10px;
+                    margin-bottom:12px;
+                    line-height:1.8;
+                ">
+                    ${q.choices.map(c => `・${c}`).join("<br>")}
+                </div>
+            `;
+        }
+
+
+        // ==============================
+        // 答えを見るボタン
+        // ==============================
+
+        html += `
+            <button
+                onclick="showAnswer('${answerId}')"
+                style="
+                    width:auto;
+                    min-height:auto;
+                    padding:10px 20px;
+                    margin:5px 0;
+                    font-size:16px;
+background:linear-gradient(135deg,#1565c0,#0d47a1);
+color:white;
+border:2px solid #0a3d91;
+font-weight:bold;
+box-shadow:0 3px 6px rgba(0,0,0,0.2);
+                    border-radius:30px;
+                ">
+
+                👀 答えを見る
+
+            </button>
+
+
+            <div
+                id="${answerId}"
+                style="
+                    display:none;
+                    margin-top:10px;
+                    padding:12px;
+                    background:#fff1a8;
+                    border:2px solid #e0a800;
+                    border-radius:10px;
+                    color:#c62828;
+                    font-size:20px;
+                    font-weight:bold;
+                ">
+
+                ✅ 正解：${q.answer}
+
+            </div>
+
+
+        </div>
+        `;
+    });
+
+
+    // ==============================
+    // 戻るボタン
+    // ==============================
 
     html += `
-        <span style="color:red;font-weight:bold;">
-            正解：${q.answer}
-        </span>
-        <br><br>
+
+        <button
+            class="floating-close-btn"
+            onclick="closeQuestionList()">
+
+            ← もどる
+
+        </button>
+
+    </div>
+
     `;
 
-    if(q.choices){
-        html += q.choices.map(c => `・${c}`).join("<br>");
-    }
-
-    html += `</div>`;
-});
-
-html += `
-<button
-    class="floating-close-btn"
-    onclick="closeQuestionList()">
-    ← もどる
-</button>
-</div>
-`;
 
     document.querySelector(".container").innerHTML = html;
 }
 
-function closeQuestionList(){
-    location.reload();
+
+
+// ========================================
+// 答えを表示・非表示
+// ========================================
+
+function showAnswer(answerId){
+
+    const answer = document.getElementById(answerId);
+
+    if(!answer) return;
+
+
+    if(answer.style.display === "none"){
+
+        answer.style.display = "block";
+
+    }else{
+
+        answer.style.display = "none";
+
+    }
+
 }
+
+
+
+// ========================================
+// 問題一覧を閉じる
+// ========================================
+
+function closeQuestionList(){
+
+    location.reload();
+
+}
+
 </script>
+
 
 </body>
 </html>

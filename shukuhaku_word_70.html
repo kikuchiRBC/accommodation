@@ -6,38 +6,386 @@
 <title>特定技能宿泊 よく出る単語・動詞167</title>
 <meta name="description" content="特定技能宿泊の学習に役立つホテル・旅館の基本単語、接客、フロント、客室清掃、安全、観光、飲食など167語。ふりがな・英語・ネパール語付き。">
 <style>
-html{scroll-behavior:smooth}
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,"Noto Sans JP",sans-serif;color:#234;background:linear-gradient(#eefaff,#fff7e8 55%,#f5f0ff);min-height:100vh}
-header{padding:24px 14px;text-align:center;background:linear-gradient(135deg,#26a69a,#1976d2);color:#fff;box-shadow:0 5px 15px #0002}
-h1{margin:0;font-size:clamp(24px,6vw,38px)} header p{margin:8px 0;font-weight:bold}
-main{width:95%;max-width:1100px;margin:20px auto 90px}
-.info,.tools{background:#fffffff2;border-radius:20px;padding:16px;box-shadow:0 6px 18px #0002;margin-bottom:16px}
-.info{line-height:1.8;text-align:center;border:3px solid #69dce9}
-input{width:100%;padding:14px;border:2px solid #69dce9;border-radius:14px;font-size:18px}
-.filters{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-top:12px}
-button{border:0;border-radius:999px;padding:9px 13px;background:#26a69a;color:white;font-weight:bold;cursor:pointer}
-button.active{background:#1976d2}
-#count{text-align:center;margin-top:12px;color:#1976d2;font-weight:bold}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
-.card{position:relative;background:#fff;border-radius:18px;padding:18px 18px 16px 54px;box-shadow:0 6px 16px #0002;border-left:6px solid #26a69a;min-height:310px}
-.image-box{width:100%;height:150px;margin:0 0 15px 0;border:3px dashed #80cbc4;border-radius:14px;background:#f3ffff;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.image-box img{width:100%;height:100%;object-fit:contain;display:block}
-.image-placeholder{color:#607d8b;font-size:20px;font-weight:bold;text-align:center;line-height:1.6}
-.image-placeholder small{display:block;font-size:11px;font-weight:normal;margin-top:3px}
-.num{position:absolute;left:14px;top:15px;color:#888;font-weight:bold}
-.jp{font-size:28px;font-weight:800;color:#075985}
-.jp rt{font-size:.48em;color:#796a6a}
+html{
+    scroll-behavior:smooth;
+}
 
-.en{margin-top:9px;font-size:18px;color:#1976d2;font-weight:bold}
-.nepali{margin-top:8px;padding:8px 10px;background:#fff8e1;border-radius:10px;color:#7a4f00;font-size:16px;font-weight:bold;border:1px solid #ffe082}
-.nepali-label{display:inline-block;margin-right:6px;padding:2px 7px;border-radius:999px;background:#ffca28;color:#5d4300;font-size:12px}
-.meaning{margin-top:7px;line-height:1.6;color:#455a64}
-.cat{display:inline-block;margin-top:10px;background:#e0f2f1;color:#00695c;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:bold}
-#none{display:none;text-align:center;background:#fff;border-radius:16px;padding:25px}
-.nav{position:fixed;bottom:12px;left:50%;transform:translateX(-50%);width:min(94%,520px);display:flex;gap:8px;z-index:10}
-.nav a{flex:1;text-align:center;text-decoration:none;padding:13px;border-radius:999px;background:#1976d2;color:#fff;font-weight:bold;box-shadow:0 5px 15px #0003}
-@media(max-width:700px){.grid{grid-template-columns:1fr}.jp{font-size:25px}.image-box{height:180px}}
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,"Noto Sans JP",sans-serif;
+    color:#4a3b20;
+    background:
+        linear-gradient(
+            #fffdf0,
+            #fff8d8 55%,
+            #fff3c4
+        );
+    min-height:100vh;
+}
+
+/* =========================
+   ヘッダー
+========================= */
+header{
+    padding:24px 14px;
+    text-align:center;
+    background:
+        linear-gradient(
+            135deg,
+            #f9d423,
+            #f4b400
+        );
+    color:#5a4300;
+    box-shadow:0 5px 15px #8a650033;
+    border-bottom:4px solid #d99b00;
+}
+
+h1{
+    margin:0;
+    font-size:clamp(24px,6vw,38px);
+    font-weight:800;
+}
+
+header p{
+    margin:8px 0;
+    font-weight:bold;
+    color:#6b4f00;
+}
+
+/* =========================
+   メイン
+========================= */
+main{
+    width:95%;
+    max-width:1100px;
+    margin:20px auto 90px;
+}
+
+/* =========================
+   説明・検索エリア
+========================= */
+.info,
+.tools{
+    background:#fffdf5f5;
+    border-radius:20px;
+    padding:16px;
+    box-shadow:0 6px 18px #8a65002b;
+    margin-bottom:16px;
+}
+
+.info{
+    line-height:1.8;
+    text-align:center;
+    border:3px solid #f4c430;
+}
+
+/* =========================
+   検索ボックス
+========================= */
+input{
+    width:100%;
+    padding:14px;
+    border:2px solid #e7b900;
+    border-radius:14px;
+    font-size:18px;
+    background:#fffef5;
+    color:#4a3b20;
+    outline:none;
+}
+
+input:focus{
+    border-color:#d99b00;
+    box-shadow:0 0 0 3px #ffe08266;
+}
+
+/* =========================
+   カテゴリーフィルター
+========================= */
+.filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    justify-content:center;
+    margin-top:12px;
+}
+
+/* ボタン */
+button{
+    border:0;
+    border-radius:999px;
+    padding:9px 13px;
+    background:
+        linear-gradient(
+            135deg,
+            #ffd54f,
+            #f4b400
+        );
+    color:#5a4300;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 3px 8px #8a650033;
+    transition:.2s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 5px 12px #8a650044;
+}
+
+button.active{
+    background:
+        linear-gradient(
+            135deg,
+            #e6a800,
+            #b87900
+        );
+    color:white;
+}
+
+/* =========================
+   件数
+========================= */
+#count{
+    text-align:center;
+    margin-top:12px;
+    color:#a66a00;
+    font-weight:bold;
+}
+
+/* =========================
+   単語カード
+========================= */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:13px;
+}
+
+.card{
+    position:relative;
+    background:#fffef8;
+    border-radius:18px;
+    padding:18px 18px 16px 54px;
+    box-shadow:0 6px 16px #8a65002b;
+    border-left:6px solid #f4b400;
+    min-height:310px;
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 22px #8a650044;
+}
+
+/* =========================
+   画像
+========================= */
+.image-box{
+    width:100%;
+    height:150px;
+    margin:0 0 15px 0;
+    border:3px dashed #e8c34a;
+    border-radius:14px;
+    background:#fffbea;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.image-box img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
+
+.image-placeholder{
+    color:#927536;
+    font-size:20px;
+    font-weight:bold;
+    text-align:center;
+    line-height:1.6;
+}
+
+.image-placeholder small{
+    display:block;
+    font-size:11px;
+    font-weight:normal;
+    margin-top:3px;
+}
+
+/* =========================
+   番号
+========================= */
+.num{
+    position:absolute;
+    left:14px;
+    top:15px;
+    color:#b28a27;
+    font-weight:bold;
+}
+
+/* =========================
+   日本語
+========================= */
+.jp{
+    font-size:28px;
+    font-weight:800;
+    color:#7a5200;
+}
+
+.jp rt{
+    font-size:.48em;
+    color:#8b7355;
+}
+
+/* =========================
+   英語
+========================= */
+.en{
+    margin-top:9px;
+    font-size:18px;
+    color:#a66a00;
+    font-weight:bold;
+}
+
+/* =========================
+   ネパール語
+========================= */
+.nepali{
+    margin-top:8px;
+    padding:8px 10px;
+    background:#fff8d7;
+    border-radius:10px;
+    color:#7a5200;
+    font-size:16px;
+    font-weight:bold;
+    border:1px solid #f0cf63;
+}
+
+.nepali-label{
+    display:inline-block;
+    margin-right:6px;
+    padding:2px 7px;
+    border-radius:999px;
+    background:#f4c430;
+    color:#5d4300;
+    font-size:12px;
+}
+
+/* =========================
+   意味
+========================= */
+.meaning{
+    margin-top:7px;
+    line-height:1.6;
+    color:#5f513d;
+}
+
+/* =========================
+   カテゴリー
+========================= */
+.cat{
+    display:inline-block;
+    margin-top:10px;
+    background:#fff0b3;
+    color:#795500;
+    border-radius:999px;
+    padding:4px 9px;
+    font-size:12px;
+    font-weight:bold;
+    border:1px solid #f1cc55;
+}
+
+/* =========================
+   該当なし
+========================= */
+#none{
+    display:none;
+    text-align:center;
+    background:#fffdf5;
+    border-radius:16px;
+    padding:25px;
+    color:#765d2d;
+    box-shadow:0 5px 15px #8a650022;
+}
+
+/* =========================
+   下部ナビ
+========================= */
+.nav{
+    position:fixed;
+    bottom:12px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(94%,520px);
+    display:flex;
+    gap:8px;
+    z-index:10;
+}
+
+.nav a{
+    flex:1;
+    text-align:center;
+    text-decoration:none;
+    padding:13px;
+    border-radius:999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd54f,
+            #f4b400
+        );
+
+    color:#5a4300;
+    font-weight:bold;
+    box-shadow:0 5px 15px #8a650044;
+    border:2px solid #e0a800;
+    transition:.2s;
+}
+
+.nav a:hover{
+    transform:translateY(-2px);
+    background:
+        linear-gradient(
+            135deg,
+            #ffe082,
+            #f6c343
+        );
+}
+
+/* =========================
+   スマホ
+========================= */
+@media(max-width:700px){
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .jp{
+        font-size:25px;
+    }
+
+    .image-box{
+        height:180px;
+    }
+
+    .nav{
+        width:94%;
+    }
+
+    .nav a{
+        padding:11px 8px;
+        font-size:14px;
+    }
+}
 </style>
 </head>
 <body id="top">
