@@ -1006,9 +1006,15 @@ allQuizData = [...QuizData1];
 startQuiz(30);
 }
 
-function startTest2(){
-    allQuizData = [...QuizData2];
-startQuiz(6);
+function startTest2(){ 
+    allQuizData = [...QuizData2]; 
+
+    // QuizData2からランダムに6問選ぶ
+    allQuizData = [...allQuizData]
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 6);
+
+    startQuiz(1); 
 }
 function goTop(){
     window.scrollTo({
