@@ -254,9 +254,9 @@ let QuizData2  = [{
   type: "text",
   image: "images/1.jpg",
   question: "あなたはみどりホテルの<ruby>従業員<rt>じゅうぎょういん</rt></ruby>です。お<ruby>客様<rt>きゃくさま</rt></ruby>から「レストランはありますか。」と<ruby>聞<rt>き</rt></ruby>かれました。どのように<ruby>答<rt>こた</rt></ruby>えますか。",
-  answer: "はい。1<ruby>階<rt>かい</rt></ruby>にカフェ、2<ruby>階<rt>かい</rt></ruby>に<ruby>和食<rt>わしょく</rt></ruby>レストランがございます。",
+  answer: "はい。1<ruby>階<rt>かい</rt></ruby>にカフェ、<ruby>和食<rt>わしょく</rt></ruby>レストランがございます。",
   choices: [
-    "はい。1<ruby>階<rt>かい</rt></ruby>にカフェ、2<ruby>階<rt>かい</rt></ruby>に<ruby>和食<rt>わしょく</rt></ruby>レストランがございます。",
+    "はい。1<ruby>階<rt>かい</rt></ruby>にカフェ、<ruby>和食<rt>わしょく</rt></ruby>レストランがございます。",
     "はい。3<ruby>階<rt>かい</rt></ruby>に<ruby>中華料理<rt>ちゅうかりょうり</rt></ruby>レストランがございます。",
     "いいえ。レストランはございません。",
     "はい。10<ruby>階<rt>かい</rt></ruby>にバーがございます。"
@@ -338,7 +338,7 @@ let QuizData2  = [{
   type: "text",
   image: "images/2.jpg",
   question: "あなたはわかばホテルの<ruby>従業員<rt>じゅうぎょういん</rt></ruby>です。お<ruby>客様<rt>きゃくさま</rt></ruby>から「<ruby>喫煙<rt>きつえん</rt></ruby>できる<ruby>部屋<rt>へや</rt></ruby>は<ruby>何室<rt>なんしつ</rt></ruby>ありますか」と<ruby>聞<rt>き</rt></ruby>かれました。どのように<ruby>答<rt>こた</rt></ruby>えますか。",
-  answer: "30<ruby>室<rt>しつ</rt></ruby>ございます。",
+  answer: "25<ruby>室<rt>しつ</rt></ruby>ございます。",
   choices: [
     "20<ruby>室<rt>しつ</rt></ruby>ございます。",
     "25<ruby>室<rt>しつ</rt></ruby>ございます。",
@@ -362,12 +362,12 @@ let QuizData2  = [{
   type: "text",
   image: "images/2.jpg",
   question: "あなたはわかばホテルの<ruby>従業員<rt>じゅうぎょういん</rt></ruby>です。お<ruby>客様<rt>きゃくさま</rt></ruby>から「スポーツジムは<ruby>有料<rt>ゆうりょう</rt></ruby>ですか」と<ruby>聞<rt>き</rt></ruby>かれました。どのように<ruby>答<rt>こた</rt></ruby>えますか。",
-  answer: "いいえ、<ruby>無料<rt>むりょう</rt></ruby>でございます。",
+  answer: "スポーツジムはございません。",
   choices: [
     "いいえ、<ruby>無料<rt>むりょう</rt></ruby>でございます。",
     "1<ruby>回<rt>かい</rt></ruby>500<ruby>円<rt>えん</rt></ruby>です。",
     "1<ruby>日<rt>にち</rt></ruby>1000<ruby>円<rt>えん</rt></ruby>です。",
-    "ご<ruby>宿泊<rt>しゅくはく</rt></ruby>の<ruby>方<rt>かた</rt></ruby>は<ruby>利用<rt>りよう</rt></ruby>できません。"
+    "スポーツジムはございません。"
   ]
 },
 {
